@@ -1,10 +1,9 @@
 n = int(input())
 k = int(input())
 arr = []
-item = 0
 for i in range(n):
-     item = int(input())
-     arr.append(item)
+     arr_item = int(input())
+     arr.append(arr_item)
 arr = sorted(arr)
 i = -1
 j = k-2
