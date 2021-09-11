@@ -11,7 +11,12 @@ for i,j in zip(s, t):  #iterate each character of s and t in i and j
         
 total_length = len(s) + len(t) #length of both the string
 
-if (total_length<= 2*count+k and total_length%2==k%2 or total_length<k):
+
+# CASE 1: k == total_length [yes]
+# Case 2: k < total_length [No]
+# Case 3: k > total_length [yes] 
+
+if (total_length <= 2*count+k and total_length%2 == k%2 or total_length<k):
     print("Yes")
 else:
     print("No")
