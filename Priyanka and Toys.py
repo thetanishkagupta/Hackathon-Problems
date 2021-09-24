@@ -1,11 +1,13 @@
 n = int(input())
-arr = list(map(int,input().split()))[:n]
-arr.sort()
-ans = 1
-prev = arr[0]
-for i in range(1,n):
-    if(arr[i] - prev) > 4:
-        prev = arr[i]
-        ans = ans + 1
-        
-print(ans)        
+w = list(map(int,input().split()))[:n]
+w.sort()
+containers = 0
+maxweight = w[0] + 4
+for i in w:
+    if i <= maxweight:
+        continue
+    containers += 1
+    maxweight = i + 4
+
+containers += 1   # Add for last container
+print(containers)
